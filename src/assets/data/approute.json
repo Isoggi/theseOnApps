@@ -1,0 +1,10 @@
+[
+  {
+    "url": "/",
+    "displayText": "Home"
+  },
+  {
+    "url": "/Dashboard",
+    "displayText": "Dashboard"
+  }
+]

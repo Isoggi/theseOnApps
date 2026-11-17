@@ -1,4 +1,10 @@
-import GetNavbarRoute from "./getRoute.utils";
-import { getFetch, postFetch, putFetch, patchFetch } from "./httpClient.utils";
+import { GetNavbarRoute } from "./getRoute.utils";
+import {
+  getData,
+  postData,
+  putData,
+  patchData,
+  deleteData,
+} from "./httpClient.utils";
 
-export { GetNavbarRoute, getFetch, postFetch, putFetch, patchFetch };
+export { GetNavbarRoute, getData, postData, putData, patchData, deleteData };

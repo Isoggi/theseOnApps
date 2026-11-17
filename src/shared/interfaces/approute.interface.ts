@@ -1,5 +1,7 @@
 export interface IAppRouteItem {
   url: string;
   displayText: string;
-  isAuth?: boolean;
+  isParent?: boolean;
+  childrenNode?: IAppRouteItem;
+  parameter?: unknown;
 }

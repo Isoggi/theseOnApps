@@ -5,9 +5,10 @@ const NavbarComponent = ({ routes, classname }: NavbarProps) => {
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        {routes.map((route) => {
+        {routes.map((route, index) => {
           return (
             <Link
+              key={index}
               href={route.url}
               displayText={route.displayText}
               className={classname}
