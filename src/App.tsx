@@ -1,21 +1,22 @@
+import { LoginPage } from "./features/authentication/pages";
 import ExamplePage from "./pages/ExamplePage";
 import {
   NavbarComponent,
   FooterComponent,
   SideBarComponent,
 } from "./shared/components";
-import { GetNavbarRoute } from "./shared/utils";
-import {} from "react";
+import { RootLayout } from "./shared/layouts";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 function App() {
-  const routes = GetNavbarRoute();
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800">
-      <NavbarComponent routes={routes} classname={""} />
-      <SideBarComponent />
-      <ExamplePage />
-      <FooterComponent />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
