@@ -1,0 +1,17 @@
+[
+  {
+    "url": "/Dashboard",
+    "displayText": "Home"
+  },
+  {
+    "url": "/Dashboard/Attendance",
+    "displayText": "Attendance",
+    "isParent": true,
+    "childrenNode": [
+      {
+        "url": "/Dashboard/Attendance/Leave",
+        "displayText": "Leave"
+      }
+    ]
+  }
+]

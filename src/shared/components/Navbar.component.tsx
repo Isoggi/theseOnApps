@@ -1,7 +1,9 @@
-import type { NavbarProps } from "../types";
-import Link from "./ui/Link.component";
+import type { ClassProps } from "../types";
+import { GetNavbarRoute } from "../utils";
+import { Link } from "./ui";
 
-const NavbarComponent = ({ routes, classname }: NavbarProps) => {
+const NavbarComponent = ({ className }: ClassProps) => {
+  const routes = GetNavbarRoute();
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
@@ -11,7 +13,7 @@ const NavbarComponent = ({ routes, classname }: NavbarProps) => {
               key={index}
               href={route.url}
               displayText={route.displayText}
-              className={classname}
+              className={className}
             />
           );
         })}

@@ -1,3 +1,3 @@
-import type { LinkProps } from "./LinkProps.type";
+import type { LinkProps, SideBarLinkProps } from "./LinkProps.type";
 
-export type { LinkProps };
+export type { LinkProps, SideBarLinkProps };

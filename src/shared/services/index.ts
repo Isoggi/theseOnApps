@@ -1,4 +1,4 @@
 import { authService } from "./auth.service";
 import { themeStorage } from "./themeStorage.service";
-import { routeStorage } from "./navbarRoute.service";
-export { authService, themeStorage, routeStorage };
+import { routeStorage, menuRouteStorage } from "./navbarRoute.service";
+export { authService, themeStorage, routeStorage, menuRouteStorage };

@@ -1,4 +1,4 @@
-import { GetNavbarRoute } from "./getRoute.utils";
+import { GetNavbarRoute, GetMenuRoute } from "./getRoute.utils";
 import {
   getData,
   postData,
@@ -7,4 +7,12 @@ import {
   deleteData,
 } from "./httpClient.utils";
 
-export { GetNavbarRoute, getData, postData, putData, patchData, deleteData };
+export {
+  GetMenuRoute,
+  GetNavbarRoute,
+  getData,
+  postData,
+  putData,
+  patchData,
+  deleteData,
+};

@@ -1,2 +1,2 @@
-import { RootLayout } from "./RootLayout";
+import { RootLayout } from "./Root.layout";
 export { RootLayout };

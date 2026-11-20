@@ -1,2 +1,3 @@
 import appRoute from "./approute.json";
-export { appRoute };
+import menuRoute from "./menuroute.json";
+export { appRoute, menuRoute };

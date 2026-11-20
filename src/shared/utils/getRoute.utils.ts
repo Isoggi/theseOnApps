@@ -1,9 +1,11 @@
 import type { IAppRouteItem } from "../interfaces";
-import { routeStorage } from "../services";
+import { menuRouteStorage, routeStorage } from "../services";
 // import { getFetch } from "./";
-import { appRoute } from "../../assets/data";
-export function GetNavbarRoute(useFetch?: string): IAppRouteItem[] {
-  if (routeStorage.getRoute()) {
+import { appRoute, menuRoute } from "../../assets/data";
+import type { IMenuRouteItem } from "../interfaces/approute.interface";
+function GetNavbarRoute(useFetch?: string): IAppRouteItem[] {
+  console.log("Get Navbar Route");
+  if (routeStorage.getRoute().length) {
     return routeStorage.getRoute();
   }
   // if (useFetch) {
@@ -12,6 +14,24 @@ export function GetNavbarRoute(useFetch?: string): IAppRouteItem[] {
   //   return appRouteFetch;
   // }
   const jsonAppRoute = appRoute as IAppRouteItem[];
+  routeStorage.setRoute(jsonAppRoute);
 
   return jsonAppRoute;
 }
+
+function GetMenuRoute(useFetch?: string): IMenuRouteItem[] {
+  console.log("Get Menu Route");
+  if (menuRouteStorage.getRoute().length) {
+    return menuRouteStorage.getRoute();
+  }
+  // if (useFetch) {
+  //   const menuRouteFetch: IMenuRouteItem[] =
+  //     getFetch() as unknown as IMenuRouteItem[];
+  //   return menuRouteFetch;
+  // }
+  const jsonMenuRoute = menuRoute as IMenuRouteItem[];
+  menuRouteStorage.setRoute(menuRoute);
+  return jsonMenuRoute;
+}
+
+export { GetMenuRoute, GetNavbarRoute };
